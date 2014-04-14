@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="General" >
+        <EditTextPreference
+            android:dialogMessage="This option reduces the effort of having to enter your USN every time you wish to use this application"
+            android:dialogTitle="Default USN"
+            android:key="name"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Submit"
+            android:summary="Sets USN"
+            android:title="Default USN" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="splash"
+            android:summaryOff="Do not show splash at startup"
+            android:summaryOn="Show spalsh at startup"
+            android:title="Splash" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="a_submit"
+            android:summary="Directly go to results page on application startup."
+            android:title="Auto Submit" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notification" >
+        <CheckBoxPreference
+            android:key="enb"
+            android:defaultValue="false"
+            android:summary="Starts polling for results when you switch on your phone"
+            android:title="Poll on System Boot" />
+
+        <EditTextPreference
+            android:defaultValue="1"
+            android:dialogMessage="Set the time interval between two consecutive polls (in mins).\n\nNote: Set a larger value to conserve battery.\nRestart polling services to apply the changes."
+            android:dialogTitle="Set Time interval"
+            android:inputType="number"
+            android:key="ti"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Set"
+            android:summary="Set the time interval between two polls"
+            android:title="Time Interval" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
